@@ -1,4 +1,4 @@
-# LeetCode Problems & Solutions in Python
+# What is this repo?
 
 In hopes of building a long term habit of learning and maintaining 
 skills. This repository serves a habit-tracking repo for my

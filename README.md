@@ -11,11 +11,11 @@ so that will be the ending point of this repository unless any
 new developments encourage me to continue.
 
 
-## Total Completed 23/1700
+## Total Completed 28/1700
 
 Delineations:
 
-Easy: 22
+Easy: 28
 
 Medium: 1
 

@@ -23,23 +23,14 @@ var longestCommonPrefix = function(strs) {
     if(strs.length == 0) {
         return "";
     }
-
-    let first_str = strs[0];
-    let end = strs.length;
-    let i = 1;
     
-    //we can start with the first string
-    //while i < strs.length
+    let first_str = strs[0];
     for(let i = 0; i < strs.length; i++) {
-        //while first_str isnt empty && first_str isnt in the current string
         while(first_str.length != 0 && !(first_str == strs[i].substr(0, first_str.length)))
-            //remove last character in first string
             first_str = first_str.substring(0, first_str.length-1);
-        
-        if(first_str.length == 0)
-            return "";
     }
-    //if we make it out here
+    if(first_str.length == 0)
+        return "";
     return first_str;
 }
 

@@ -15,7 +15,7 @@ new developments encourage me to continue.
 
 Delineations:
 
-Easy: 28
+Easy: 35
 
 Medium: 1
 

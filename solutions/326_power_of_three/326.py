@@ -13,6 +13,7 @@
 #
 #Input: n = 0
 #Output: false
+import math
 
 n = 27
 answer = True
@@ -22,21 +23,19 @@ class Solution:
         if n == 0:
             return False
 
-        curr = 0
-        power = 0
+        low = 0
+        high = n
         #while curr != n
-        while curr != n:
-            #calculate the curr for this power
-            curr = 3 ** power
-            #if curr is greater than n
-            if curr > n:
-                #return False, its not a power of three!
-                return False
-            power += 1
-                
-        #if we make it out here
-        #then curr == n
-        return True
+        while low < high:
+            mid = low + math.floor((high-low)/2);
+            if 3 ** mid == n:
+                return True 
+            elif 3 ** mid > n:
+                high = mid
+            elif 3 ** mid < n:
+                low = mid + 1
+
+        return False 
 
 print(f"Input: {n}, Answer: {answer}")
 print(f"My answer: {Solution().isPowerOfThree(n)}")

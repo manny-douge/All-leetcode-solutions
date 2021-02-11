@@ -11,7 +11,7 @@ so that will be the ending point of this repository unless any
 new developments encourage me to continue.
 
 
-## Total Completed 37/1700
+## Total Completed 39/1700
 
 Delineations:
 

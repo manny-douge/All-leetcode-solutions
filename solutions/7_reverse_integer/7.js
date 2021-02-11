@@ -22,25 +22,25 @@ var reverse = function(x) {
     
     let x_str = x.toString();
     let x_rev = "";
+    
     //turn x -> string
     let end = x_str.length-1;
-    //iterate over string in reverse
+    
+    //create string in reverse
     while(end >= 0) {
         x_rev += x_str[end];
         end -= 1;
     }
     
-    //iterate over string //ignoring - signs and removing zeros until we find our first none zero number
-    while(x_rev.length != 0 && x_rev[0] == '0') {
-        if(x_rev[0] == '0')
-            x_rev = x_rev.substring(1, x_rev.length);
-        //else if zero
-            //remove. zero from string
-    }
-        
-    let rev_int = parseInt(x_rev);
+    //find first index of non zero number
+    let index = 0;
+    while(index < x_rev.length && x_rev[index] == "0")
+        index += 1;
+    
+    //create string from first non zero index
+    let rev_int = parseInt(x_rev.substring(index, x_rev.length));
     rev_int = (x < 0) ? -rev_int : rev_int;
-    //cast string to integer
+    
     if(rev_int > (2 ** 31)-1 || rev_int < -(2 ** 31))
         return 0;
 

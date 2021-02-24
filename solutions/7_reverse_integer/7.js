@@ -23,23 +23,11 @@ var reverse = function(x) {
     let x_str = x.toString();
     let x_rev = "";
     
-    //turn x -> string
-    let end = x_str.length-1;
-    
     //create string in reverse
-    while(end >= 0) {
-        x_rev += x_str[end];
-        end -= 1;
-    }
-    
-    //find first index of non zero number
-    let index = 0;
-    while(index < x_rev.length && x_rev[index] == "0")
-        index += 1;
-    
-    //create string from first non zero index
-    let rev_int = parseInt(x_rev.substring(index, x_rev.length));
-    rev_int = (x < 0) ? -rev_int : rev_int;
+    for(let i = x_str.length-1; i >= 0; i--)
+        x_rev += x_str[i];
+        
+    let rev_int = (x < 0) ? -parseInt(x_rev): parseInt(x_rev);
     
     if(rev_int > (2 ** 31)-1 || rev_int < -(2 ** 31))
         return 0;

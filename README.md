@@ -3,7 +3,7 @@
 In hopes of building a long term habit of learning and maintaining 
 skills related to technical problems and time/space complexity analysis.
 This repository serves a habit-tracking repo for my
-semi-daily practice on LeetCode and related technical problems.
+practice on LeetCode and related technical problems.
 
 
 At the start of this repo, there were 1700 problems on LeetCode,

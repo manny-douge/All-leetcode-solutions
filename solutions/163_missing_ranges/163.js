@@ -39,7 +39,7 @@ var findMissingRanges = function(nums, lower, upper) {
     let missingRanges = [];
     
     //catch first edge case when first number isnt == lower
-    if(nums[0] > lower)
+    if(nums[0] != lower)
         missingRanges.push(formatRange(lower, nums[0]-1));
     
     //handle missing ranges in between
@@ -49,7 +49,7 @@ var findMissingRanges = function(nums, lower, upper) {
     }
     
     //catch second edge case when last number isnt == upper
-    if(nums[nums.length-1] < upper)
+    if(nums[nums.length-1] !=  upper)
         missingRanges.push(formatRange(nums[nums.length-1]+1, upper));
     
     return missingRanges;

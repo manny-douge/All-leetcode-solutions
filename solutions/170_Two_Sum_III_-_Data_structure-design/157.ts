@@ -44,3 +44,7 @@ for (const num of nums) {
 }
 console.log(`Adding nums: ${nums}`);
 console.log(`Sum for ${sumToFind} exists: ${twoSum.find(sumToFind)}`);
+
+
+// Time Complexity : O(N Log N), sort is amortized based on class boolean
+// Space complexity: O(n)
